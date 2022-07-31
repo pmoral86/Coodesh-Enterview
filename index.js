@@ -22,6 +22,8 @@ async function example() {
     await driver.findElement(By.className("jsx-2868889731 fas fa-search btn-icon__inner")).click(); // 3 - Um vez na tela de vagas, nosso sistema de teste automatizado terá que buscar por `uma empresa` onde terá um ou mais resultados de vagas
     await driver.manage().window().maximize();
     await driver.sleep(4000);
+    await driver.findElement(By.className("h4 font-weight-medium text-dark mb-1")).click();
+    await driver.sleep(2000);
     let confirmPage = await driver.findElement(By.css("#content > div > div > div.mb-lg-0.d-none.d-lg-block.col-lg-5 > nav > div.m-0.row > button")).getText().then(function(value){
         return value
     }); // confirmando que a vaga abriu copiando um texto fixo da mesma
